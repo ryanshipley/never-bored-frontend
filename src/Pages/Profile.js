@@ -2,19 +2,12 @@ import React from 'react';
 import NAV from "./components/Nav";
 
 function Profile(props){
-
-    const [profile, setProfile] = React.useState(null);
-    const URL = "";
-    const getProfile = async()=>{
-        const response = await fetch(URL);
-        const data = await response.json();
-        setProfile(data);
-    };
-
     return (
     <div className="Profile">
         <NAV/>
-        <Profile profile={profile}/>
+        <h1>Profile Page</h1>
+        <img src={user.image} />
+        <h3>About Us: {user.about}</h3>
     </div>
     );
 };
