@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function SignUp(props){
     const [ newForm, setNewForm ] = React.useState({
@@ -20,7 +19,34 @@ function SignUp(props){
             image: "",
         });
     };
-    
+    return (
+        <section>
+            <form onSubmit={handleSubmit}>
+                <input
+                type="text"
+                value={newForm.name}
+                name="name"
+                placeholder="name"
+                onChange={handleChange}
+                />
+                <input
+                type="text"
+                value={newForm.email}
+                name="email"
+                placeholder="couples123@123.com"
+                onChange={handleChange}
+                />
+                <input 
+                type="text"
+                value={newForm.image}
+                name="image"
+                placeholder="image"
+                onChange={handleChange}
+                />
+                <input type="submit" value="Join Here" />
+            </form>
+        </section>
+    );
 };
 
 export default SignUp;
