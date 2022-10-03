@@ -2,8 +2,11 @@ import React from 'react';
 import NAV from "./components/Nav";
 
 function Profile(props){
-    return (
-    <div className="Profile">
+    const id = props.match.params.id;
+    const profile = props.profile;
+    const user = profile.find(p => p._id === id);
+    return(
+        <div>
         <NAV/>
         <h1>Profile Page</h1>
         <img src={user.image} />
