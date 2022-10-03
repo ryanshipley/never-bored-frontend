@@ -21,6 +21,27 @@ function SignIn(props){
          };
         };
     };
+    return(
+        <section>
+            <form onSubmit={handleSubmit}>
+                <label>Username </label>
+                <input
+                type="text"
+                name="un"
+                placeholder="adminho"
+                required/>
+                <input
+                type="password"
+                nane="ps"
+                placeholder="abc1234"
+                required/>
+                <input
+                type="submit"
+                value="Login"
+                />
+            </form>
+        </section>
+    )
 };
 
 export default SignIn;
