@@ -1,5 +1,6 @@
 import React from 'react';
 import NAV from "./components/Nav";
+import Footer from "./components/Footer";
 
 function Profile(props){
     const id = props.match.params.id;
@@ -11,6 +12,7 @@ function Profile(props){
         <h1>Profile Page</h1>
         <img src={user.image} />
         <h3>About Us: {user.about}</h3>
+        <Footer/>
     </div>
     );
 };
