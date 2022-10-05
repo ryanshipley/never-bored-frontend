@@ -1,18 +1,24 @@
 import "./App.css";
 import React, { Component }  from 'react';
 import "./index.css";
-import { Route, Swtich } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Main from "./Components/Main";
 
 function App() {
   const URL = "https://never-bored-couple-backend.herokuapp.com/"
   return(
     <div className="App">
-      <Swtich>
+      <Switch>
         <Route exact path="/">
-          <Main />
+          <Main URL={URL} />
         </Route>
-      </Swtich>
+        <Route exact path="/signin">
+          <SignIn URL={URL}/>
+        </Route>
+        <Route exact path="/signup">
+          <SignUp URL={URL}/>
+        </Route>
+      </Switch>
     </div>
   );
 }
