@@ -8,6 +8,12 @@ import SignUp from "./Pages/SignUp";
 
 function App() {
   const URL = "https://never-bored-couple-backend.herokuapp.com/"
+  const { token, setToken} = React.useState();
+
+  if(!token){
+    return <SignIn setToken={setToken} URL={URL} />
+  }
+
   return(
     <div className="App">
       <Switch>
@@ -17,9 +23,7 @@ function App() {
         <Route exact path="/signin">
           <SignIn URL={URL}/>
         </Route>
-        <Route exact path="/signup">
-          <SignUp URL={URL}/>
-        </Route>
+
       </Switch>
     </div>
   );
