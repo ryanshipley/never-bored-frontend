@@ -1,18 +1,18 @@
 import "./App.css";
 import React, { Component }  from 'react';
 import "./index.css";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
+import { Route, Swtich } from "react-router-dom";
 import Main from "./Components/Main";
-import Navbar from "./Navigation/Navbar";
 
 function App() {
+  const URL = "https://never-bored-couple-backend.herokuapp.com/"
   return(
     <div className="App">
-      <Footer />
-      <Header />
-      <Main />
-      <Navbar />
+      <Swtich>
+        <Route exact path="/">
+          <Main />
+        </Route>
+      </Swtich>
     </div>
   );
 }
