@@ -37,8 +37,11 @@ const Main = (props) => {
     <div className="Main">
   <h1>NeverBored Couples</h1>
   <img src="https://imgur.com/UmxUBos.png" alt="NeverBored" />
-  <Link to="/login">
+  <Link to="/signin">
     <div>Login/SignIn</div>
+  </Link>
+  <Link to="/signup">
+    <div>Sign up here</div>
   </Link>
   </div>
   )

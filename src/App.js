@@ -3,6 +3,8 @@ import React, { Component }  from 'react';
 import "./index.css";
 import { Route, Switch } from "react-router-dom";
 import Main from "./Components/Main";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 
 function App() {
   const URL = "https://never-bored-couple-backend.herokuapp.com/"
