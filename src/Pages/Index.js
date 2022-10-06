@@ -44,12 +44,14 @@ const loading = () => {
 };
 
 return (
+    <div className="index">
+        <h1>Create new</h1>
     <section>
         <form onSubmit={handleSubmit}>
             <input
             type="text"
-            value={newForm.name}
-            name="name"
+            value={newForm.activityName}
+            name="activityName"
             onChange={handleChange}
             />
             <input
@@ -74,6 +76,7 @@ return (
         </form>
         {props.activities ? loaded() : loading()}
         </section>
+        </div>
 );
 }
 

@@ -18,7 +18,7 @@ function App(props) {
   }
 
   const createActivities = async activity => {
-    await fetch(URL, {
+    await fetch(URL + "couples/activityPage", {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",
@@ -31,24 +31,25 @@ function App(props) {
   useEffect(() => 
   {getActivities()}, []);
 
-  // return(
-    // <div className="App">
-    //   <Switch>
-    //     <Route exact path="/">
-    //       <Index activities={activities} createActivities={createActivities} />
-    //     </Route>
-    //     <Route 
-    //       path="/couples/activityPage/:id" 
-    //       render={rp => (
-    //         <Show 
-    //         activities={activities}
-    //         {...rp}
-    //         />
-    //       )}
-    //     />
-    //   </Switch>
-    // </div>
-  // );
+  return(
+    <div className="App">
+      <Switch>
+        <Route exact path="/">
+          <Index activities={activities} 
+          createActivities={createActivities} />
+        </Route>
+        <Route 
+          path="/couples/activityPage/:id" 
+          render={rp => (
+            <Show 
+            activities={activities}
+            {...rp}
+            />
+          )}
+        />
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
