@@ -11,13 +11,13 @@ const Index = (props) => {
 
 //handleChange function for form
 const handleChange = (event) => {
-    setNewForm({ ...newForm, [event.target.name]: event.target.value });
+    setNewForm({ ...newForm, [event.target.name]: event.target.value});
 };
 
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    props.createActivity(newForm);
+    props.createActivities(newForm);
     setNewForm({
         activityName: "",
         accessability: "",
@@ -28,25 +28,30 @@ const handleSubmit = (event) => {
 
 // loaded function
 const loaded = () => {
-    return props.activity.map((activity) => (
-        <div key={activity._id} className="activity">
-            <Link to={`/activity/${activity._id}`}><h1>{activity.name}</h1></Link>
+    return props.activities.map((activity) => (
+        <div 
+        key={activity._id} 
+        className="activity">
+        <Link to={`/couples/activityPage/${activity._id}`}>
+            <h1>{activity.activityName}</h1>
+        </Link>
         </div>
     ));
-
 };
 
 const loading = () => {
-    return <h1>Loading</h1>
+    return <h1>Loading...</h1>
 };
 
 return (
+    <div className="index">
+        <h1>Create new</h1>
     <section>
-        <form onsubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <input
             type="text"
-            value={newForm.name}
-            name="name"
+            value={newForm.activityName}
+            name="activityName"
             onChange={handleChange}
             />
             <input
@@ -69,8 +74,9 @@ return (
             />
             <input type="submit" value="Create Activity" />
         </form>
-        {props.activity ? loaded() : loading()}
+        {props.activities ? loaded() : loading()}
         </section>
+        </div>
 );
 }
 
