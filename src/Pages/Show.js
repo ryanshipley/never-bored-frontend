@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-function Show(props) {
+function Show (props) {
     const id = props.match.params.id;
     const activities = props.activities;
     // _id is coming from our backend/database MongoDb
