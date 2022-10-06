@@ -46,37 +46,49 @@ const loading = () => {
 
 return (
     <div className="index">
+        <div className="container">
         <h1>Create new</h1>
-    <section>
+        <section>
+            <div className="form-group">
         <form onSubmit={handleSubmit}>
-            <input 
+            <label for ="activity">Pick an Activity</label>
+            <input
+            className="form-control" 
             type="text"
             value={newForm.activityName}
             name="activityName"
             onChange={handleChange}
             />
+            <label for ="accessability">Accessability</label>
             <input
+            className="form-control"
             type="text"
             value={newForm.accessability}
             name="accessability"
             onChange={handleChange}
             />
+            <label for ="description">Description</label>
             <input
+            className="form-control"
             type="text"
             value={newForm.description}
             name="description"
             onChange={handleChange}
             />
+            <label for ="type">What Type of Activity</label>
             <input
+            className="form-control"
             type="text"
             value={newForm.type}
             name="type"
             onChange={handleChange}
             />
-            <input type="submit" value="Create Activity" />
+           <button className="btn btn-primary"> <input type="submit" value="Create Activity" /></button>
         </form>
+        </div>
         {props.activities ? loaded() : loading()}
         </section>
+        </div>
         </div>
 );
 }
