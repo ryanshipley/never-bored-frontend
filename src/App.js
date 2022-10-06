@@ -1,25 +1,51 @@
 import "./App.css";
-import React, { Component }  from 'react';
+import React, { Component, useEffect, useState }  from 'react';
 import "./index.css";
 import { Route, Switch } from "react-router-dom";
-import Main from "./Components/Main";
-import SignIn from "./Pages/SignIn";
-import SignUp from "./Pages/SignUp";
+import Show from "./Pages/Show";
+import Index from "./Pages/Index";
 
-function App() {
+
+function App(props) {
+  const [ activities, setActivities ] = useState(null);
+
   const URL = "https://never-bored-couple-backend.herokuapp.com/"
+
+  const getActivities = async () => {
+    const response = await fetch(URL + "couples/activityPage");
+    const data = await response.json();
+    setActivities(data);
+  }
+
+  const createActivities = async activity => {
+    await fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(activity),
+    });
+    getActivities();
+  }
+
+  useEffect(() => 
+  {getActivities()}, []);
+
   return(
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Main URL={URL} />
+          <Index activities={activities} createActivities={createActivities} />
         </Route>
-        <Route exact path="/signin">
-          <SignIn URL={URL}/>
-        </Route>
-        <Route exact path="/signup">
-          <SignUp URL={URL}/>
-        </Route>
+        <Route 
+          path="/couples/activityPage/:id" 
+          render={rp => (
+            <Show 
+            activities={activities}
+            {...rp}
+            />
+          )}
+        />
       </Switch>
     </div>
   );
