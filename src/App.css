@@ -1,12 +1,25 @@
 body {
   margin: 0;
   padding: 0;
-  height:1000px;
  }
+
+ #root {
+  height: 100vh;
+ }
+
  .App{
   color: #228b22;
   text-align: center;
+  height: 100%;
  }
+
+ .index {
+  background-image: url(/public/pexels.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+ }
+
  .footer {
   background-color: green;
   border-top:2px solid red;
@@ -16,3 +29,4 @@ body {
   color: white;
   font-size: 25px;
  }
+

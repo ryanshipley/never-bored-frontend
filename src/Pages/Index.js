@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Index = (props) => {
     const [newForm, setNewForm] = useState({ 
@@ -48,7 +49,7 @@ return (
         <h1>Create new</h1>
     <section>
         <form onSubmit={handleSubmit}>
-            <input
+            <input 
             type="text"
             value={newForm.activityName}
             name="activityName"
