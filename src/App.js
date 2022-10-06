@@ -4,6 +4,7 @@ import "./index.css";
 import { Route, Switch } from "react-router-dom";
 import Show from "./Pages/Show";
 import Index from "./Pages/Index";
+import Navbar from "./Components/Navbar";
 
 
 function App(props) {
@@ -33,6 +34,7 @@ function App(props) {
 
   return(
     <div className="App">
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <Index activities={activities} 
