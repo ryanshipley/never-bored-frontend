@@ -13,6 +13,16 @@ body {
   height: 100%;
  }
 
+ nav {
+  height: 45px;
+  background-color: #1F2937;
+  padding: 6px 24px;
+ }
+
+ nav img {
+  height: 100%;
+  border-radius: 5px;
+ }
  .index {
   background-image: url(/public/pexels.jpg);
   background-size: cover;
@@ -31,9 +41,15 @@ body {
   font-size: 25px;
  }
 
- .activity {
-  color: rgb(12, 197, 243);
+ #show-page {
+  background-image: url(/src/Assets/dancing.jpeg);
+  background-size: cover;
+  height: 100%;
+  color: black;
+ }
 
+ .show-data {
+  background-color: rgba(211, 211, 211, .4);
  }
 
  input.form-control {
