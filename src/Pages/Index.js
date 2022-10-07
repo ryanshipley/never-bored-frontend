@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Index = (props) => {
     const [newForm, setNewForm] = useState({ 
    activityName: "",
-   accessability: "",
+   accessibility: "",
    description: "",
    type: "",
 });
@@ -21,7 +21,7 @@ const handleSubmit = (event) => {
     props.createActivities(newForm);
     setNewForm({
         activityName: "",
-        accessability: "",
+        accessibility: "",
         description: "",
         type: "",
     });
@@ -46,50 +46,50 @@ const loading = () => {
 
 return (
     <div className="index">
-        <div className="container">
         <h1>Create new</h1>
         <section>
-            <div className="form-group">
-        <form onSubmit={handleSubmit}>
-            <label for ="activity">Pick an Activity</label>
-            <input
-            className="form-control" 
-            type="text"
-            value={newForm.activityName}
-            name="activityName"
-            onChange={handleChange}
-            />
-            <label for ="accessability">Accessability</label>
-            <input
-            className="form-control"
-            type="text"
-            value={newForm.accessability}
-            name="accessability"
-            onChange={handleChange}
-            />
-            <label for ="description">Description</label>
-            <input
-            className="form-control"
-            type="text"
-            value={newForm.description}
-            name="description"
-            onChange={handleChange}
-            />
-            <label for ="type">What Type of Activity</label>
-            <input
-            className="form-control"
-            type="text"
-            value={newForm.type}
-            name="type"
-            onChange={handleChange}
-            />
-           <button className="btn btn-primary"> <input type="submit" value="Create Activity" /></button>
-        </form>
-        </div>
-        {props.activities ? loaded() : loading()}
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="activity-name-input">Pick an Activity</label>
+                <input
+                    id="activity-name-input"
+                    className="form-control"
+                    type="text"
+                    value={newForm.activityName}
+                    name="activityName"
+                    onChange={handleChange}
+                />
+                <label htmlFor="accessibility-input">Accessability</label>
+                <input
+                    id="accessibility-input"
+                    className="form-control"
+                    type="text"
+                    value={newForm.accessibility}
+                    name="accessibility"
+                    onChange={handleChange}
+                />
+                <label htmlFor="description-input">Description</label>
+                <input
+                    id="description-input"
+                    className="form-control"
+                    type="text"
+                    value={newForm.description}
+                    name="description"
+                    onChange={handleChange}
+                />
+                <label htmlFor="type-input">What Type of Activity</label>
+                <input
+                    id="type-input"
+                    className="form-control"
+                    type="text"
+                    value={newForm.type}
+                    name="type"
+                    onChange={handleChange}
+                />
+                <button className="btn btn-primary"> <input type="submit" value="Create Activity" /></button>
+            </form>
+            {props.activities ? loaded() : loading()}
         </section>
-        </div>
-        </div>
+    </div>
 );
 }
 
