@@ -22,6 +22,7 @@ a {
 }
 
 nav {
+  display: flex;
   height: 45px;
   background-color: #1F2937;
   padding: 6px 24px;
@@ -30,7 +31,14 @@ nav {
   color: #eee;
 }
 
+nav h2 {
+  font-size: 17px;
+  align-self: center;
+  margin: 0;
+}
+
 nav img {
+  margin-right: 10px;
   height: 100%;
   border-radius: 5px;
 }

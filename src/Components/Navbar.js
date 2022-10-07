@@ -6,6 +6,7 @@ const Navbar = () => {
         <Link to="/">
             <img src="https://imgur.com/UmxUBos.png" alt="app-logo" />
         </Link>
+        <h2>TheNeverBoredCouple</h2>
     </nav>
   )
 }
