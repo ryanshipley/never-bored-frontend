@@ -1,60 +1,97 @@
-body {
+* {
   margin: 0;
   padding: 0;
- }
+  box-sizing: border-box;
+}
 
- #root {
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+#root {
   height: 100vh;
- }
+}
 
- .App{
+.App {
   color: #228b22;
   text-align: center;
   height: 100%;
- }
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
 
- nav {
+nav {
   height: 45px;
   background-color: #1F2937;
   padding: 6px 24px;
- }
+  position: sticky;
+  top: 0;
+  color: #eee;
+}
 
- nav img {
+nav img {
   height: 100%;
   border-radius: 5px;
- }
- .index {
+}
+
+.index {
   background-image: url(/public/pexels.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
-  background-position: 50% 60% ;
- }
+  background-position: 50% 60%;
+  background-attachment: fixed;
+}
 
- .footer {
+.index form {
+  width: 80%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input.form-control {
+  /* width: 73%; */
+  /* align-items: center; */
+  /* margin-left: 90px; */
+  margin-bottom: 5px;
+}
+
+#index-loaded-activities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+  margin: 12px 32px;
+}
+
+.activity {
+  border: solid 1px black;
+  border-radius: 5px;
+  font-size: 12px;
+  transition: background-color 250ms ease;
+}
+
+.activity:hover {
+  background-color: #eee;
+}
+
+.footer {
   background-color: green;
-  border-top:2px solid red;
+  border-top: 2px solid red;
   position: fixed;
   width: 100%;
   bottom: 0;
   color: white;
   font-size: 25px;
- }
+}
 
- #show-page {
+#show-page {
   background-image: url(/src/Assets/dancing.jpeg);
   background-size: cover;
   height: 100%;
   color: black;
- }
+}
 
- .show-data {
+.show-data {
   background-color: rgba(211, 211, 211, .4);
- }
-
- input.form-control {
-  width: 73%;
-  align-items: center;
-  margin-left: 90px;
-  margin-bottom: 5px;
- }
+}
