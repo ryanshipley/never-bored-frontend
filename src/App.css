@@ -28,10 +28,10 @@ nav {
   padding: 6px 24px;
   position: sticky;
   top: 0;
-  color: #eee;
 }
 
-nav h2 {
+nav a h2 {
+  color: #eee;
   font-size: 17px;
   align-self: center;
   margin: 0;
@@ -77,6 +77,9 @@ input.form-control {
   border-radius: 5px;
   font-size: 12px;
   transition: background-color 250ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .activity:hover {
@@ -102,4 +105,9 @@ input.form-control {
 
 .show-data {
   background-color: rgba(211, 211, 211, .4);
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
 }
