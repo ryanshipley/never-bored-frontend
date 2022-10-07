@@ -80,6 +80,7 @@ input.form-control {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .activity:hover {
@@ -101,6 +102,22 @@ input.form-control {
   background-size: cover;
   height: 100%;
   color: black;
+}
+
+#show-page-error-div {
+  padding: 32px 0;
+}
+
+#show-page-error-div button {
+  margin-top: 10px;
+  border: solid 1px black;
+  padding: 4px 6px;
+  border-radius: 0;
+  transition: border-radius 250ms;
+}
+
+#show-page-error-div button:hover {
+  border-radius: 10px;
 }
 
 .show-data {
