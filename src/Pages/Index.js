@@ -34,7 +34,7 @@ const loaded = () => {
         key={activity._id} 
         className="activity">
         <Link to={`/couples/activityPage/${activity._id}`}>
-            <h1>{activity.activityName}</h1>
+            <h3>{activity.activityName}</h3>
         </Link>
         </div>
     ));
@@ -58,7 +58,7 @@ return (
                     name="activityName"
                     onChange={handleChange}
                 />
-                <label htmlFor="accessibility-input">Accessability</label>
+                <label htmlFor="accessibility-input">Accessibility</label>
                 <input
                     id="accessibility-input"
                     className="form-control"
@@ -87,7 +87,9 @@ return (
                 />
                 <button className="btn btn-primary"> <input type="submit" value="Create Activity" /></button>
             </form>
-            {props.activities ? loaded() : loading()}
+            <div id="index-loaded-activities">
+                {props.activities ? loaded() : loading()}
+            </div>
         </section>
     </div>
 );
