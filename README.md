@@ -15,8 +15,11 @@
 * CSS3
 
 ## Screenshots
+![index](src/Images/Pro3-index.png)
+![show](src/Images/pro3-show.png)
 
 ## Check it out ;P
+[here](https://clinquant-frangipane-d5018e.netlify.app/) is the project!! Let us know what you think :)
 
 ## Next Steps
 * Enable randomality function to spice up the night ;)
